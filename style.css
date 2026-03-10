@@ -1,113 +1,134 @@
-/* Reset básico */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* --- ESTILO TELA CHEIA (INDEX) --- */
+.hero-fullscreen {
+    background-image: url('https://cristalalimentos.com.br/wp-content/uploads/2022/05/Lasanha-cristal-alimentos-1282x850.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    text-align: center;
+    position: relative;
 }
 
-/* Container principal (Simulando o card do Figma) */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content-home {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.content-home h1 { font-size: 4rem; margin-bottom: 20px; }
+.content-home p { font-size: 1.5rem; margin-bottom: 30px; max-width: 700px; }
+
+/* --- ESTILO DOS CARDS (SABORES) --- */
+/* --- ESTILO DOS CARDS (SABORES) --- */
+
+/* Esta classe garante a centralização total */
+.body-cards {
+    display: flex;           /* Ativa o modo flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;       /* Ocupa 100% da altura da tela */
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
 .card {
     background: white;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
+    width: 90%;              /* Responsivo para celulares */
+    max-width: 400px;        /* Largura máxima no PC */
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Sombra mais profunda para destaque */
     text-align: center;
-    border: 1px solid #e0e0e0;
+    animation: fadeIn 0.6s ease-out;
 }
 
-/* Imagens das Receitas */
+/* Mantendo o restante do seu código anterior... */
 .receita-img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    display: block;
 }
 
-/* Banner Amarelo da Home */
-.home-overlay {
-    background-color: #f1d83a; /* Amarelo do Figma */
-    padding: 30px 20px;
-    margin-top: -60px;
-    position: relative;
-    z-index: 2;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.card-content {
+    padding: 30px;
 }
 
-.home-overlay h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Animação suave ao abrir */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.home-overlay p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+.receita-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
 }
 
-/* Conteúdo das Páginas de Sabores */
-.content {
+.card-content {
     padding: 25px;
 }
 
-.content h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
+.card-content h2 { font-size: 1.4rem; margin-bottom: 10px; color: #333; }
+.card-content p { font-size: 0.95rem; color: #666; line-height: 1.5; }
 
-.content p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.ingredientes-titulo {
+.ingredientes-label {
     font-weight: bold;
-    color: #000;
+    color: #222;
     margin-top: 15px;
     display: block;
 }
 
-/* Botões e Navegação */
+/* Botões */
 .btn-primary {
     display: inline-block;
-    background: white;
-    color: black;
-    padding: 10px 25px;
-    border-radius: 25px;
+    padding: 15px 35px;
+    background-color: #f1d83a;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    transition: 0.3s;
 }
+
+.btn-primary:hover { transform: scale(1.05); background-color: #fff; }
 
 .nav-links {
     margin-top: 20px;
-    padding-top: 15px;
     border-top: 1px solid #eee;
+    padding-top: 15px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #d32f2f;
     font-weight: bold;
-    font-size: 14px;
     margin: 0 10px;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
