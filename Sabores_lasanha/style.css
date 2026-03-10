@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal (Simulando o card do Figma) */
+.card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+/* Imagens das Receitas */
+.receita-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Banner Amarelo da Home */
+.home-overlay {
+    background-color: #f1d83a; /* Amarelo do Figma */
+    padding: 30px 20px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-overlay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home-overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Conteúdo das Páginas de Sabores */
+.content {
+    padding: 25px;
+}
+
+.content h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.ingredientes-titulo {
+    font-weight: bold;
+    color: #000;
+    margin-top: 15px;
+    display: block;
+}
+
+/* Botões e Navegação */
+.btn-primary {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
